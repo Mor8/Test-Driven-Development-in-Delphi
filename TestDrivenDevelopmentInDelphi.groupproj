@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{70FBA7B8-2ADF-41D9-83CF-67144412BCC6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MultiCurrencyMoney.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\MultiCurrencyMoneyTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MultiCurrencyMoney">
+        <MSBuild Projects="MultiCurrencyMoney.dproj"/>
+    </Target>
+    <Target Name="MultiCurrencyMoney:Clean">
+        <MSBuild Projects="MultiCurrencyMoney.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiCurrencyMoney:Make">
+        <MSBuild Projects="MultiCurrencyMoney.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MultiCurrencyMoneyTests">
+        <MSBuild Projects="Test\MultiCurrencyMoneyTests.dproj"/>
+    </Target>
+    <Target Name="MultiCurrencyMoneyTests:Clean">
+        <MSBuild Projects="Test\MultiCurrencyMoneyTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiCurrencyMoneyTests:Make">
+        <MSBuild Projects="Test\MultiCurrencyMoneyTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MultiCurrencyMoney;MultiCurrencyMoneyTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MultiCurrencyMoney:Clean;MultiCurrencyMoneyTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MultiCurrencyMoney:Make;MultiCurrencyMoneyTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
