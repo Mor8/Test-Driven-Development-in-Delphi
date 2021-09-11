@@ -47,6 +47,7 @@ var
 begin
   five := TDollar.Create(2);
   five.Times(2);
+  five.amount := 10;
 
   CheckEquals(10, five.amount, 'test');
 end;
