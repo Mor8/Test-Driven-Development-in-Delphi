@@ -2,7 +2,7 @@
 
 interface
 
-uses SysUtils, StrUtils;
+uses SysUtils, StrUtils, System.Variants;
 
 type
   TDollar = class(TObject)
@@ -12,7 +12,7 @@ type
   public
     amount: Integer;
     constructor Create(amount: Integer);
-    procedure Times(multiplier: Integer);
+    function Times(multiplier: Integer): TDollar;
 
   end;
 
@@ -23,8 +23,12 @@ begin
   Self.amount := amount;
 end;
 
-procedure TDollar.Times(multiplier: Integer);
+function TDollar.Times(multiplier: Integer): TDollar;
+var
+  FDollar: TDollar;
+
 begin
   amount := amount*multiplier;
+  Result := FDollar;
 end;
 end.

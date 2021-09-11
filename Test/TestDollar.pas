@@ -41,11 +41,15 @@ begin
 end;
 
 procedure TestTDollar.TestMutliplication;
+var
+  product: TDollar;
 
 begin
-  FDollar.Times(2);
+  product := FDollar.Times(2);
+  CheckEquals(10, product.amount, 'test');
+  product := FDollar.Times(3);
+  CheckEquals(15, product.amount);
 
-  CheckEquals(10, FDollar.amount, 'test');
 end;
 
 initialization
