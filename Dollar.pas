@@ -20,10 +20,11 @@ implementation
 
 constructor TDollar.Create(amount: Integer);
 begin
+  Self.amount := amount;
 end;
 
 procedure TDollar.Times(multiplier: Integer);
 begin
-
+  amount := amount*multiplier;
 end;
 end.

@@ -31,7 +31,7 @@ implementation
 
 procedure TestTDollar.SetUp;
 begin
-  FDollar := TDollar.Create(0);
+  FDollar := TDollar.Create(5);
 end;
 
 procedure TestTDollar.TearDown;
@@ -41,15 +41,11 @@ begin
 end;
 
 procedure TestTDollar.TestMutliplication;
-var
-  five: TDollar;
 
 begin
-  five := TDollar.Create(2);
-  five.Times(2);
-  five.amount := 10;
+  FDollar.Times(2);
 
-  CheckEquals(10, five.amount, 'test');
+  CheckEquals(10, FDollar.amount, 'test');
 end;
 
 initialization
