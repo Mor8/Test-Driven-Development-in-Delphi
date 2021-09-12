@@ -25,7 +25,6 @@ end;
 
 function TDollar.Times(multiplier: Integer): TDollar;
 begin
-  amount := amount*multiplier;
-  Result := nil;
+  Result := TDollar.Create(amount * multiplier);
 end;
 end.
