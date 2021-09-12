@@ -88,7 +88,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="TestDollar.pas"/>
+        <DCCReference Include="TestMoney.pas"/>
         <DCCReference Include="..\Dollar.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

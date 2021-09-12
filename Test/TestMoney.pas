@@ -17,7 +17,7 @@ uses
 type
   // クラスのテスト メソッド TDollar
 
-  TestTDollar = class(TTestCase)
+  TestTMoney = class(TTestCase)
   strict private
     FDollar: TDollar;
   public
@@ -30,17 +30,17 @@ type
 
 implementation
 
-procedure TestTDollar.SetUp;
+procedure TestTMoney.SetUp;
 begin
   FDollar := TDollar.Create(5);
 end;
 
-procedure TestTDollar.TearDown;
+procedure TestTMoney.TearDown;
 begin
   FDollar.Free;
 end;
 
-procedure TestTDollar.TestMutliplication;
+procedure TestTMoney.TestMutliplication;
 var
   product: TDollar;
 
@@ -50,7 +50,7 @@ begin
 
 end;
 
-procedure TestTDollar.TestEquality;
+procedure TestTMoney.TestEquality;
 begin
   Assert.IsTrue(TDollar.Create(5).Equals(TDollar.Create(5)));
   Assert.IsFalse(TDollar.Create(5).Equals(TDollar.Create(6)))
@@ -58,6 +58,6 @@ end;
 
 initialization
   // テスト ケースをテスト ランナーに登録する
-  RegisterTest(TestTDollar.Suite);
+  RegisterTest(TestTMoney.Suite);
 end.
 
