@@ -55,6 +55,7 @@ end;
 procedure TestTDollar.TestEquality;
 begin
   Assert.IsTrue(TDollar.Create(5).Equals(TDollar.Create(5)));
+  Assert.IsFalse(TDollar.Create(5).Equals(TDollar.Create(6)))
 end;
 
 initialization

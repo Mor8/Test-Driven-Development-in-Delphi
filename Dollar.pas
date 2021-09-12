@@ -32,7 +32,11 @@ begin
 end;
 
 function TDollar.Equals(AObject: TObject): boolean;
+var
+  FDollar: TDollar;
+
 begin
-  Result := true;
+  FDollar := TDollar(AObject);
+  Result := amount = FDollar.amount;
 end;
 end.
