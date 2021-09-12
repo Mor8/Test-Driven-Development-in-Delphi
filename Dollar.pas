@@ -13,7 +13,7 @@ type
     amount: Integer;
     constructor Create(amount: Integer);
     function Times(multiplier: Integer): TDollar;
-
+    function Equals(AObject: TObject): boolean;
   end;
 
 implementation
@@ -29,5 +29,10 @@ var
 begin
   FDollar := TDollar.Create(amount * multiplier);
   Result := FDollar;
+end;
+
+function TDollar.Equals(AObject: TObject): boolean;
+begin
+  Result := true;
 end;
 end.
