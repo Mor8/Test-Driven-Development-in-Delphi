@@ -45,10 +45,8 @@ var
   product: TDollar;
 
 begin
-  product := FDollar.Times(2);
-  Assert.IsTrue(TDollar.Create(10).Equals(product));
-  product := FDollar.Times(3);
-  Assert.IsTrue(TDollar.Create(15).Equals(product));
+  Assert.IsTrue(TDollar.Create(10).Equals(FDollar.Times(2)));
+  Assert.IsTrue(TDollar.Create(15).Equals(FDollar.Times(3)));
 
 end;
 
