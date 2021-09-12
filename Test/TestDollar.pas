@@ -12,7 +12,7 @@
 interface
 
 uses
-  TestFramework, StrUtils, Dollar, SysUtils;
+  TestFramework, StrUtils, Dollar, SysUtils, DunitX.TestFramework;
 
 type
   // クラスのテスト メソッド TDollar
@@ -45,9 +45,9 @@ var
 
 begin
   product := FDollar.Times(2);
-  CheckEquals(10, product.amount, 'test');
+  Assert.areEqual(10, product.amount);
   product := FDollar.Times(3);
-  CheckEquals(15, product.amount);
+  Assert.areEqual(15, product.amount);
 
 end;
 

@@ -24,7 +24,10 @@ begin
 end;
 
 function TDollar.Times(multiplier: Integer): TDollar;
+var
+  FDollar: TDollar;
 begin
-  Result := TDollar.Create(amount * multiplier);
+  FDollar := TDollar.Create(amount * multiplier);
+  Result := FDollar;
 end;
 end.
