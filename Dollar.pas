@@ -2,7 +2,7 @@
 
 interface
 
-uses SysUtils, StrUtils, System.Variants;
+uses SysUtils, StrUtils;
 
 type
   TDollar = class(TObject)
@@ -24,11 +24,8 @@ begin
 end;
 
 function TDollar.Times(multiplier: Integer): TDollar;
-var
-  FDollar: TDollar;
-
 begin
   amount := amount*multiplier;
-  Result := FDollar;
+  Result := nil;
 end;
 end.

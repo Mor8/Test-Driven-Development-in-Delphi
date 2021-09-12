@@ -37,7 +37,6 @@ end;
 procedure TestTDollar.TearDown;
 begin
   FDollar.Free;
-  FDollar := nil;
 end;
 
 procedure TestTDollar.TestMutliplication;
