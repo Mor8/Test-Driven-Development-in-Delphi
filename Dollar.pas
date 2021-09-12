@@ -8,9 +8,8 @@ type
   TDollar = class(TObject)
 
   private
-  //   amount: Integer;
-  public
     amount: Integer;
+  public
     constructor Create(amount: Integer);
     function Times(multiplier: Integer): TDollar;
     function Equals(AObject: TObject): boolean;
