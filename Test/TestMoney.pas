@@ -1,4 +1,4 @@
-﻿unit TestDollar;
+﻿unit TestMoney;
 {
 
   Delphi DUnit テスト ケース
