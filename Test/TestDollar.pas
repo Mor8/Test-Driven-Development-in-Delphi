@@ -25,6 +25,7 @@ type
     procedure TearDown; override;
   published
     procedure TestMutliplication;
+    procedure TestEquality;
   end;
 
 implementation
@@ -49,6 +50,11 @@ begin
   product := FDollar.Times(3);
   Assert.areEqual(15, product.amount);
 
+end;
+
+procedure TestTDollar.TestEquality;
+begin
+  Assert.IsTrue(TDollar.Create(5).Equals(TDollar.Create(5)));
 end;
 
 initialization
