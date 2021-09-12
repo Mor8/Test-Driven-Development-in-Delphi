@@ -17,7 +17,8 @@
 uses
   DUnitTestRunner,
   TestMoney in 'TestMoney.pas',
-  Dollar in '..\Dollar.pas';
+  Dollar in '..\Dollar.pas',
+  Franc in '..\Franc.pas';
 
 {$R *.RES}
 

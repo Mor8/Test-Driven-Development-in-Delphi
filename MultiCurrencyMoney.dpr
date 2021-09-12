@@ -13,7 +13,8 @@
 uses
   System.SysUtils,
   System.Classes,
-  Dollar in 'Dollar.pas';
+  Dollar in 'Dollar.pas',
+  Franc in 'Franc.pas';
 
 {$R *.res}
 
